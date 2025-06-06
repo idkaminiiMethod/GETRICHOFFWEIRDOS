@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ghost Website</title>
+
+  <!-- Google Fonts: Cartoony style -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Luckiest Guy', cursive;
+    }
+
+    .section-black {
+      background: #000;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      color: white;
+      overflow: hidden;
+    }
+
+    .overlay, .bottom-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      text-align: center;
+      z-index: 1;
+      padding: 0 10px;
+      animation: floatText 3s ease-in-out infinite;
+    }
+
+    .overlay {
+      top: 5vh;
+      font-size: 1.6em;
+      max-height: 30vh;
+      overflow: auto;
+    }
+
+    .bottom-text {
+      bottom: 5vh;
+      font-size: 1.3em;
+      max-height: 25vh;
+      overflow: auto;
+    }
+
+    .ghost-container {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      max-height: 30vh;
+      animation: floatImage 3s ease-in-out infinite;
+    }
+
+    .ghost-container img {
+      width: auto;
+      height: 100%;
+      max-height: 30vh;
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+    }
+
+    @keyframes floatImage {
+      0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+      50% { transform: translate(-50%, -50%) translateY(-15px); }
+    }
+
+    .section-white {
+      height: 100vh;
+      width: 100%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      animation: floatWhite 3s ease-in-out infinite;
+    }
+
+    .section-white h1 {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: black;
+    }
+
+    .section-white a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 25px 60px;
+      background: black;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 20px;
+      transition: background 0.3s;
+      font-size: 2em;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-white a:hover {
+      background: #333;
+    }
+
+    @keyframes floatWhite {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Black Section -->
+  <section class="section-black">
+    <div class="overlay">
+      <h1>GET RICH OFF WEIRDOS!!!</h1>
+      <p>
+        For generations, predators—those who exploit, manipulate, or abuse others—have been a disgrace to societies across the world. 
+        <br> Their actions leave lasting damage on individuals, families, and communities. 
+        <br> These abuses violate basic human rights and trust, often taking place in environments meant to be safe. 
+        <br> Despite increased awareness and legal action, the persistent presence of predators remains a global issue.
+      </p>
+    </div>
+
+    <div class="ghost-container">
+      <img src="ghost.png" alt="Ghost" />
+    </div>
+
+    <div class="bottom-text">
+      <p> 
+        But...using the help of my course, YOU, YES YOU, can get rich off of these weirdos on SNAPCHAT, and put an end to their predatory ways!
+        <br> Scroll down to learn how you can profit from these idiots and help make the world a safer place!
+      </p>
+    </div>
+  </section>
+
+  <!-- Scroll Target Section -->
+  <section class="section-white" id="guide">
+    <a href="https://t.me/idkaMethods" target="_blank">DM ME HERE FOR THE GUIDE!!!</a>
+  </section>
+
+</body>
+</html>
